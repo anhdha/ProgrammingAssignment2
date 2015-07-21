@@ -1,13 +1,12 @@
 ## makeCacheMatrix and cacheSolve save the inverse of a matrix so that if the matrix
-## does not change, they enable one to use it without having to inverse the matrix over
+## does not change, one will be able to use the cached inverse without having to calculate it over
 ## and over again.
 
 
 ## makeCacheMatrix stores a matrix and cache its inverse. It contains a list of functions
 ## (get(), set(), get_inv(), set_inv()). 
 ## get() returns the matrix 'x' that was stored in the makeCacheMatrix function. 
-## set() changes the matrix 'x'('x <<- y' replaces x with y 
-## in the main function makeCacheMatrix). It also resets the value of inv back to NULL. 
+## set() changes the matrix 'x'to 'y'('x <<- y' replaces x with y) in the main function makeCacheMatrix). It also resets the value of inv back to NULL. 
 ## get_inv() and set_inv() returns and stores the value of the input into makeCacheMatrix, respectively.
 ## list is the result of the main function, containing 4 functions as its elements.
 
@@ -24,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## caheSolve computes a matrix that is the inverse of 'x'. If the inverse of 'x' has
+## cacheSolve computes a matrix that is the inverse of 'x'. If the inverse of 'x' has
 ## been calculated and stored in makeCacheMatrix (not NULL), cacheSolve would pull out the cached inverse.
 ## If the inverse in makeCacheMatrix was NULL, caheSolve would get the matrix 'x',
 ## compute the inverse matrix and store this in makeCacheMatrix using set_inv().
